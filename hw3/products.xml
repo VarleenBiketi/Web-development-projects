@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href = "myStyle.css" ?>
+<products>
+ <top>
+  <title>GeekStop</title>
+  <quote> "For all your computer needs"</quote>
+  </top>
+  <topProduct>
+  <category name="Laptops"> 
+     <type>1.Laptops</type>
+    <product>
+      <name>HP Pavilion X360</name>
+      <description>A versatile 2-in-1 laptop with touchscreen</description>
+      <size>13-inch, 15-inch</size>
+      <price>799.99</price>
+      <uses> Technology,Laptops </uses>
+      <buy> Buy </buy>
+    </product>
+    <product>
+      <name>Dell XPS 13</name>
+      <description>An ultrabook with a stunning InfinityEdge display</description>
+      <size>13-inch, 15-inch</size>
+      <price>1199.99</price>
+      <uses> Technology,Laptops</uses>
+      <buy> Buy </buy>
+    </product>
+    <product>
+      <name>Lenovo ThinkPad T480</name>
+      <description>A business laptop with great durability and performance</description>
+      <size>14-inch, 15-inch</size>
+      <price>899.99</price>
+      <uses> Technology,Laptops</uses>
+      <buy> Buy </buy>
+    </product>
+  </category>
+  </topProduct>
+  <category name="Desktops">
+  <type>2.Desktops</type>
+    <product>
+      <name>Apple iMac Pro</name>
+      <description>A powerful all-in-one desktop for professionals</description>
+      <size>27-inch, 32-inch</size>
+      <price>4999.99</price>
+      <uses> Technology,Desktops</uses>
+      <buy> Buy </buy>
+    </product>
+    <product>
+      <name>HP Omen Obelisk</name>
+      <description>A gaming desktop with high-performance specs</description>
+      <size>24-inch, 27-inch</size>
+      <price>1499.99</price>
+      <uses> Technology,Desktops</uses>
+      <buy> Buy</buy>
+    </product>
+  </category>
+  <category name="Accessories">
+  <type>3.Accessories</type>
+    <product>
+      <name>Samsung 32-inch Curved Monitor</name>
+      <description>Curved QHD monitor for immersive viewing</description>
+      <size>32-inch, 34-inch</size>
+      <price>499.99</price>
+      <uses> Technology,Displays </uses>
+      <buy> Buy </buy>
+    </product>
+    <product>
+      <name>Logitech MX Master 3.000</name>
+      <description>Wireless ergonomic mouse with customizable buttons</description>
+      <size>Standard, Small</size>
+      <price>99.99</price>
+      <uses> Technology,Accessories </uses>
+      <buy> Buy </buy>
+    </product>
+  </category>
+  <category name="Keyboards">
+  <type>4.Keyboards</type>
+    <product>
+      <name>Razer BlackWidow Elite</name>
+      <description>Mechanical gaming keyboard with RGB lighting</description>
+      <size>Standard, Small</size>
+      <price>149.99</price>
+      <uses> Technology,Keyboards</uses>
+      <buy> Buy</buy>
+    </product>
+    <product>
+      <name>Corsair K95 RGB Platinum</name>
+      <description>High-end mechanical gaming keyboard with customizable RGB lighting</description>
+      <size>Standard, Small</size>
+      <price>179.99</price>
+      <uses> Technology,Keyboards</uses>
+      <buy> Buy </buy>
+    </product>
+  </category>
+</products>

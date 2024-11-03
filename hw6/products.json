@@ -1,0 +1,88 @@
+{
+    "products": [
+      {
+        "name": "Gaming Laptop",
+        "description": "High-performance gaming laptop for immersive gaming experiences.",
+        "price": 1499.99,
+        "size" : "small",
+        "categories": ["Electronics", "Computers", "Gaming"]
+      },
+      {
+        "name": "Gaming Console",
+        "description": "Next-gen gaming console for console gaming enthusiasts.",
+        "price": 499.99,
+        "size" : "12 inches",
+        "categories": ["Electronics", "Gaming"]
+      },
+      {
+        "name": "Gaming Mouse",
+        "description": "High-precision gaming mouse with customizable RGB lighting.",
+        "price": 49.99,
+        "size" : "17 inches",
+        "categories": ["Electronics", "Gaming", "Peripherals"]
+      },
+      {
+        "name": "Game Controller",
+        "description": "Wireless game controller for PC and gaming consoles.",
+        "price": 39.99,
+        "size" : "12 inches",
+        "categories": ["Electronics", "Gaming", "Peripherals"]
+      },
+      {
+        "name": "VR Headset",
+        "description": "Virtual reality headset for immersive gaming and experiences.",
+        "price": 299.99,
+        "size" : "17 inches",
+        "categories": ["Electronics", "Gaming", "Virtual Reality"]
+      },
+      {
+        "name": "Gaming Keyboard",
+        "description": "Mechanical gaming keyboard with customizable key switches.",
+        "price": 79.99,
+        "size" : "19 inches",
+        "categories": ["Electronics", "Gaming", "Peripherals"]
+      },
+      {
+        "name": "Video Game Console Rack",
+        "description": "Organize and display your gaming consoles and accessories.",
+        "price": 69.99,
+        "size" : "10 inches",
+        "categories": ["Furniture", "Gaming"]
+      },
+      {
+        "name": "Gaming Monitor",
+        "description": "High-refresh-rate gaming monitor for smooth gameplay.",
+        "price": 349.99,
+        "size" : "12 inches",
+        "categories": ["Electronics", "Gaming", "Monitors"]
+      },
+      {
+        "name": "Game Capture Card",
+        "description": "Record and stream your gaming sessions with high-quality capture card.",
+        "price": 129.99,
+        "size" : "16 inches",
+        "categories": ["Electronics", "Gaming", "Streaming"]
+      },
+      {
+        "name": "Gaming Headset",
+        "description": "Immersive gaming headset with surround sound and noise-cancellation.",
+        "price": 89.99,
+        "size" : "18 inches",
+        "categories": ["Electronics", "Gaming", "Audio"]
+      },
+      {
+        "name": "Video Game Collection",
+        "description": "A collection of classic and modern video games for various platforms.",
+        "price": 199.99,
+        "size" : "medium",
+        "categories": ["Gaming", "Collectibles"]
+      },
+      {
+        "name": "Gamer T-Shirt",
+        "description": "Stylish and comfortable t-shirt with gaming-themed design.",
+        "price": 19.99,
+        "size" : "large",
+        "categories": ["Fashion", "Gaming", "Apparel"]
+      }
+    ]
+  }

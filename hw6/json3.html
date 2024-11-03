@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function filterAndDisplayProducts(category) {
+            var products = [];
+
+            if (category === "All") {
+                products = data.products.map(function(product) {
+                    return product.name;
+                });
+            } else {
+                products = data.products
+                    .filter(function(product) {
+                        return product.categories.includes(category);
+                    })
+                    .map(function(product) {
+                        return product.name;
+                    });
+            }
+            $("#productDisplay").html(products.join("<br>"));
+        }
+
+        var data;
+
+        $.get("products.json", function(response) {
+            data = response;
+
+            var categories = ["All"];
+            data.products.forEach(function(product) {
+                product.categories.forEach(function(category) {
+                    if (!categories.includes(category)) {
+                        categories.push(category);
+                    }
+                });
+            });
+
+            var categorySelect = $("#category");
+
+            categories.forEach(function(category) {
+                categorySelect.append($("<option>", {
+                    value: category,
+                    text: category,
+                }));
+            });
+
+            $("#filterButton").on("click", function() {
+                var selectedCategory = categorySelect.val();
+                filterAndDisplayProducts(selectedCategory);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Product Filter</h1>
+
+    <form id="filterForm">
+        <label for="category">Select a Category:</label>
+        <select id="category" name="category"></select>
+        <button type="button" id="filterButton">Filter</button>
+    </form>
+
+    <div id="productDisplay"></div>   
+</body>
+</html>

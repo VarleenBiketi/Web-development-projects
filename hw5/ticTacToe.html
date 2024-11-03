@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" 
+    crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nabla|Caveat|Sofia Sans">
+    <title>Tic Tac Toe</title>
+    <style>
+        body{
+            overflow: auto;
+            position: absolute;
+            margin: 0;
+            background-image: url(tac.jpg);
+            background-size: cover;
+            opacity: 0.9;
+        }
+        #nav{
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.9);
+            width: 100%;
+            color: white;
+            z-index: 1;
+        }
+        #name{
+            display: inline-block;
+            font-size: 40px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            font-family: "Nabla";
+            border: 1px hidden black;
+            padding-left: 2%;
+        } #quote{
+            display: inline-block;
+            font-size: 25px;
+            font-family: "Caveat";
+            border: 1px hidden black;
+            margin-left: 55%;
+        }
+        .grid-container {
+            display: grid;
+            top: 20%;
+            position: relative;
+            margin-top: 3%;
+            left: 90%;
+            grid-template-columns: 150px 150px 150px;
+            border: 1px hidden black;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+        .grid-item{
+            width: 150px;
+            height: 150px;
+            font-size: 40px;
+        } 
+        a{
+            text-decoration: none;
+        } 
+        button:hover{
+            background-color: rgb(205, 203, 203);
+        }
+        #top{
+            display: block;
+            position: relative;
+            color: black;
+            font-size: 30px;
+            left: 90%;
+            right:35%;
+            background-color: white;
+            padding: 5px;
+            border: 1px hidden black;
+            border-radius: 3px;
+            text-align: center;
+            font-family: "Sofia Sans";
+            font-weight: 300;
+            margin-top: 30%;
+            margin-left: 50%;
+        } 
+         a {
+            display:block;
+            position: relative;
+            top: 20%;
+            left: 85%;
+            right: 20%;
+            color: white;
+            background-color: black;
+            font-family: "Sofia Sans";
+            font-size: 20px;
+            padding: 8px;
+            border: 1px hidden black;
+            border-radius: 5px;
+            margin-top: 10%;
+            margin-left: 70%;
+            text-align: center;
+        } 
+        a:hover{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id = "name"> Tic-Tac-Toe</div>
+        <div id = "quote"> "IF YOU DARE TEST YOUR STRATEGY"</div>
+    </div>
+    
+    <div id = "top"></div>
+    <div class="grid-container" id="grid-container">
+    </div>
+    <a href="ticTacToe.html">New Game</a>
+    <script>
+        var turn = Math.floor(Math.random() * 2) + 1;
+        if(turn == 1){
+            document.getElementById("top").innerHTML = "Player X's Turn!";
+          }else {
+            document.getElementById("top").innerHTML = "Player O's Turn!";
+        }
+        const rowNum = 3;
+        const colNum = 3;
+
+        const gridContainer = document.getElementById('grid-container');
+
+        var index = 1;
+
+        for (let row = 0; row < rowNum; row++) {
+            for (let col = 0; col < colNum; col++) {
+                var iD = "btn" + index;
+                var item = document.createElement('button');
+                item.className = 'grid-item';
+                item.id = iD;
+                gridContainer.appendChild(item);
+                index++;
+            }
+        }
+        $(document).ready(function(){  
+          var player1Turn = true;
+          var player1Value = "X";
+          var player2Value = "O";
+          var btn1Occ = false;
+          var btn2Occ = false;
+          var btn3Occ = false;
+          var btn4Occ = false;
+          var btn5Occ = false;
+          var btn6Occ = false;
+          var btn7Occ = false;
+          var btn8Occ = false;
+          var btn9Occ = false;
+          var win = false;
+          
+           $("#btn1").click(function(){
+                if(!btn1Occ){
+                    if (player1Turn){
+                        $("#btn1").text(player1Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player O's Turn!";
+                    } else{
+                        $("#btn1").text(player2Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player X's Turn!";
+                    }
+                    btn1Occ = true;
+                    win = checkWin();  
+                    if(!win){
+                        checkIfFull();
+                }  
+                    
+                }
+            });
+           $("#btn2").click(function(){
+                if(!btn2Occ){
+                    if (player1Turn){
+                        $("#btn2").text(player1Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player O's Turn!";
+                    } else{
+                        $("#btn2").text(player2Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player X's Turn!";
+                    } 
+                    btn2Occ = true; 
+                    win = checkWin(); 
+                    if(!win){
+                        checkIfFull();
+                }  
+                }
+            });
+           $("#btn3").click(function(){
+                if(!btn3Occ){
+                    if (player1Turn){
+                        $("#btn3").text(player1Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player O's Turn!";
+                    } else{
+                        $("#btn3").text(player2Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player X's Turn!";
+                    }
+                    btn3Occ = true;
+                    win = checkWin(); 
+                    if(!win){
+                        checkIfFull();
+                }      
+                }
+            });
+           $("#btn4").click(function(){
+                if(!btn4Occ){
+                    if (player1Turn){
+                        $("#btn4").text(player1Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player O's Turn!";
+                    } else{
+                        $("#btn4").text(player2Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player X's Turn!";
+                    }
+                    btn4Occ = true;
+                    win = checkWin(); 
+                    if(!win){
+                        checkIfFull();
+                }  
+                }  
+           });
+           $("#btn5").click(function(){
+                if(!btn5Occ){
+                    if (player1Turn){
+                        $("#btn5").text(player1Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player O's Turn!";
+                    } else{
+                        $("#btn5").text(player2Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player X's Turn!";
+                    }
+                    btn5Occ = true;  
+                    win = checkWin(); 
+                    if(!win){
+                        checkIfFull();
+                }  
+                }
+            });
+           $("#btn6").click(function(){
+                if(!btn6Occ){
+                    if (player1Turn){
+                        $("#btn6").text(player1Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player O's Turn!";
+                    } else{
+                        $("#btn6").text(player2Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player X's Turn!";
+                    } 
+                    btn6Occ = true;  
+                    win = checkWin(); 
+                    if(!win){
+                        checkIfFull();
+                }  
+                } 
+            });
+           $("#btn7").click(function(){
+                if(!btn7Occ){
+                    if (player1Turn){
+                        $("#btn7").text(player1Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player O's Turn!";
+                    } else{
+                        $("#btn7").text(player2Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player X's Turn!";
+                    }
+                    btn7Occ = true;   
+                    win = checkWin(); 
+                    if(!win){
+                        checkIfFull();
+                }  
+                }  
+            });
+           $("#btn8").click(function(){
+                if(!btn8Occ){
+                    if (player1Turn){
+                        $("#btn8").text(player1Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player X's Turn!";
+                    } else{
+                        $("#btn8").text(player2Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player O's Turn!";
+                    }
+                    btn8Occ = true;  
+                    win = checkWin(); 
+                    if(!win){
+                        checkIfFull();
+                }  
+                }  
+            });
+           $("#btn9").click(function(){
+                if(!btn9Occ){
+                    if (player1Turn){
+                        $("#btn9").text(player1Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player X's Turn!";
+                    } else{
+                        $("#btn9").text(player2Value);
+                        player1Turn = !player1Turn;
+                        document.getElementById("top").innerHTML = "Player O's Turn!";
+                    } 
+                    btn9Occ = true; 
+                    win = checkWin(); 
+                    if(!win){
+                        checkIfFull();
+                }  
+                }
+                
+            });
+            function checkIfFull(){
+                var occArr = [btn1Occ,btn2Occ,btn3Occ,btn4Occ,btn5Occ,
+                btn6Occ,btn7Occ,btn8Occ,btn9Occ];
+                var full = true;
+                for(var i = 0;i < 9;i++){
+                    if(occArr[i] == false) {
+                        full = false;
+                    }
+                }
+                if(full){
+                    document.getElementById("top").innerHTML = "GAME IS OVER";
+                }
+            }
+            function checkWin() {
+                if ($("#btn1").text() === $("#btn4").text() && $("#btn4").text() === $("#btn7").text()) {
+                    if (btn1Occ && btn4Occ && btn7Occ) {
+                        if ($("#btn1").text() === player1Value) {
+                            document.getElementById("top").innerHTML = "PlayerXWins!";
+                        } else {
+                            document.getElementById("top").innerHTML = "PlayerOWins!";
+                        }
+                        btn2Occ = true;
+                        btn3Occ = true;
+                        btn5Occ = true;
+                        btn6Occ = true;
+                        btn8Occ = true;
+                        btn9Occ = true;
+                        win = true;
+                    }
+                } else if ($("#btn2").text() === $("#btn5").text() && $("#btn5").text() === $("#btn8").text()) {
+                    if (btn2Occ && btn5Occ && btn8Occ) {
+                        if ($("#btn2").text() === player1Value) {
+                            document.getElementById("top").innerHTML = "PlayerXWins!";
+                        } else {
+                            document.getElementById("top").innerHTML = "PlayerOWins!";
+                        }
+                        btn1Occ = true;
+                        btn5Occ = true;
+                        btn3Occ = true;
+                        btn6Occ = true;
+                        btn7Occ = true;
+                        btn9Occ = true;
+                        win = true;
+                    }
+                } else if ($("#btn3").text() === $("#btn6").text() && $("#btn6").text() === $("#btn9").text()) {
+                    if (btn3Occ && btn6Occ && btn9Occ) {
+                        if ($("#btn3").text() === player1Value) {
+                            document.getElementById("top").innerHTML = "PlayerXWins!";
+                        } else {
+                            document.getElementById("top").innerHTML = "PlayerOWins!";
+                        }
+                        btn4Occ = true;
+                        btn5Occ = true;
+                        btn1Occ = true;
+                        btn2Occ = true;
+                        btn7Occ = true;
+                        btn8Occ = true;
+                        win = true;
+                    }
+                }
+                return win;
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

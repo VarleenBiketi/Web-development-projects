@@ -1,0 +1,105 @@
+#topBar{
+    background-color: black;
+    position:fixed;
+    width:100%;
+    z-index: 2;
+}
+#logo{
+    display: inline-block;
+    font-family: "Skranji";
+    font-size: 40px;
+    margin-right: 60%;
+    color: white;
+}
+ul{
+    display: inline-block;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    margin: 1px solid black;
+}
+#active{
+    background-color: rgb(78, 77, 77);
+}
+li a{
+    text-decoration: none;
+    font-family: "Oswald";
+    color: white;
+    background-color: black;
+    padding: 10px;
+} a:hover{
+    background-color: rgb(78, 77, 77);
+}
+body{
+    background-image: url(comps.jpg);
+    background-size:cover;
+    opacity: 0.8;
+    overflow-y: auto;
+    overflow-x: hidden;
+}#container{
+    position: absolute;
+    z-index: 1;
+    top: 8%;
+    width: 100%;
+    height:100%;
+    display: block;
+    text-align: center;
+    background-color: rgb(13, 13, 14);
+    opacity: 0.8;
+} #about{
+    position:absolute;
+    top:18%;
+    left:25%;
+    display: block;
+    border-style: hidden;
+    border-radius: 5px;
+    width:50%;
+    height:auto;
+    z-index: 2;
+    color:black;
+    background-color: white;
+    font-weight: 900;
+    font-family: "Sofia Sans";
+    font-size: 40px;
+    text-align: center;
+    opacity: 0.9;
+} #paragraph{
+    font-family: "Roboto Condensed";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+} button{
+    background-color: black;
+    border-style: hidden;
+    border-radius: 5px ;
+    padding: 10px;
+    margin-bottom: 5px;
+} button:hover{
+    background-color: rgb(78, 77, 77);
+} a{
+    text-decoration: none;
+    font-family: "Roboto Condensed";
+    font-size: 15px;
+    font-weight: 200;
+    color:white;
+} 
+#offer{
+    position: absolute;
+    top:10%;
+    display: block;
+    border-style: hidden;
+    border-radius: 5px;
+    padding-left:20%;
+    padding-right: 20%;
+    width:auto;
+    height:auto;
+    left:25%;
+    background-color: white;
+    text-align: center;
+    font-family: "Caveat";
+    font-size: 45px;
+    color:black;
+    z-index: 2;
+    font-weight: 900;
+}

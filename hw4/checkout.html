@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat|Prompt|Young Serif|Roboto Condensed|Bungee Spice|Sofia Sans">
+<title>Joe's-checkout</title>
+<style>
+    body{
+        position: absolute;
+        width: 100%;
+        background-image: url(eating2.jpg);
+        background-size: cover;
+        overflow-x: hidden;
+        margin-top: 0;
+        margin-left: 0;
+    } 
+    #nav{
+        position: fixed;
+        background-color: black;
+        width:100%;
+        z-index: 1;
+    }
+    .topBar{
+        margin-left: 0;
+        background-color: black;
+        color:white;
+        font-size: 40px;
+        font-family: "Bungee Spice";
+        font-weight:300;
+        display: block;
+        width: 100%;
+        z-index: 1;
+        border: 1px hidden black;
+        margin-top: 0;
+        padding: 2px;
+    } 
+     html{
+         scroll-behavior:smooth;
+    }
+    #checkout{
+        display: block;
+        position: relative;
+        margin-top: 10%;
+        margin-left: 20%;
+        margin-right:20%;
+        background-color: rgba(3, 3, 3, 0.9);
+        border: 4px hidden black;
+        border-radius: 10px;
+    } #checkoutTitle{
+        color:white;
+        font-weight: 900;
+        font-family: "Sofia Sans";
+        font-size: 38px;
+        text-align: center;
+        opacity: 0.8;
+        display: block;
+    } #numDogs{
+        color:black;
+        font-family: "Sofia Sans";
+        font-size: 20px;
+        opacity: 0.8;
+        display: block;
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-bottom: 2%;
+        color: white;
+    }
+    #discount,#subTotal,#numFries,#numSoda,
+    #newSubTotal,#tax{
+        color: white;
+        font-family: "Sofia Sans";
+        font-size: 20px;
+        opacity: 0.8;
+        display: block;
+        padding-left: 10%;
+        padding-bottom: 2%;
+    } #quantityTitle,#sumTitle{
+        color: white;
+        font-weight: 600;
+        font-family: "Sofia Sans";
+        font-size: 25px;
+        text-align: center;
+        opacity: 0.8;
+        display: block; 
+        padding-top: 2%;
+    }#Total{
+        color: white;
+        font-weight: 600;
+        font-family: "Sofia Sans";
+        font-size: 25px;
+        opacity: 0.8;
+        display: block; 
+        padding-top: 2%;
+        padding-left: 10%;
+    } button{
+        font-family: "Sofia Sans";
+         font-size: 20px;
+         background-color: white;
+         color: black;
+         margin-left: 45%;
+         margin-bottom: 2%;
+         border: 1px hidden black;
+         border-radius: 2px;
+         padding-left: 2%;
+         padding-right: 2%;
+    } button:hover{
+        background-color: gray;
+    } a{
+        text-decoration: none;
+    }
+</style>
+
+</head>
+<body>
+    <div id="nav">
+        <div class="topBar"><a href="Joe's.html">Joe's Hotdog Stand</a></div>
+    </div>
+    <div id="checkout">
+        <div id="checkoutTitle">CHECKOUT</div>
+        <div id="quantityTitle">Quantity</div> 
+        <div id="numDogs"></div>
+        <div id="numFries"></div>
+        <div id="numSoda"></div>
+        <div id="sumTitle">Totals</div>
+        <div id="subTotal"></div>
+        <div id="discount"></div>
+        <div id="newSubTotal"></div>
+        <div id ="tax"></div>
+        <div id="Total"></div>
+        <button>Pay</button>
+    </div>
+    <script>
+    var round = (num)=>{
+       newNum = (Math.round(num * 100)/100) + "";  
+       if(newNum[newNum.length - 2] == "."){
+          newNum += "0";
+       } else if(!newNum.includes(".")){
+          newNum += ".00";
+       }
+       return newNum;
+    }
+    const dogsPrice = 3.75;
+    const friesPrice = 3.00;
+    const sodaPrice = 2.50;
+    var numDogs = prompt("How many HotDogs do you want?",1);
+    var numFries = prompt("How many fries do you want?",1);
+    var numSoda = prompt("How many drinks do you want?",2);
+    newDogs = round(numDogs * dogsPrice);
+    newFries = round(numFries * friesPrice);
+    newSoda = round(numSoda * sodaPrice);
+    document.getElementById("numDogs").innerHTML = "- Hotdogs " + "(" + numDogs + ")"+ " cost: $ " + newDogs;
+    document.getElementById("numFries").innerHTML = "- Fries" +"(" + numFries + ")" + " cost: $" + newFries;
+    document.getElementById("numSoda").innerHTML = "- Sodas" + "(" + numSoda + ")" + " cost: $" + newSoda;
+    var subTotal = (numDogs * dogsPrice) + (numFries * friesPrice) + (numSoda * sodaPrice);
+    if(subTotal != null){
+        newSubTotal= round(subTotal);
+        document.getElementById("subTotal").innerHTML = "Subtotal: $" + newSubTotal;
+    } 
+    if(subTotal >= 25){
+        var discount = subTotal * 0.1;
+        newDiscount = round(discount);
+        document.getElementById("discount").innerHTML = "Discount: $" + newDiscount;
+        subTotal = subTotal - discount;
+        newSubTotal= round(subTotal);
+        document.getElementById("newSubTotal").innerHTML = "Subtotal after discount: $" + newSubTotal;
+    } else{
+        newdiscount = round(discount);
+        newsubTotal= round(subTotal);
+        document.getElementById("discount").innerHTML = "Discount: $0.00";
+        document.getElementById("newSubTotal").innerHTML = "Subtotal after discount: $" + newSubTotal;
+    }
+    var tax = subTotal * 0.0625;
+    newTax= round(tax);
+    document.getElementById("tax").innerHTML = "Tax: $" + newTax;
+    var total = subTotal + tax;
+    newTotal= round(total);
+    document.getElementById("Total").innerHTML = "Total: $" + newTotal;
+
+    
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Skranji|Oswald|Roboto Condensed|Sofia Sans|Caveat">
+    <title>Tech Profits-Homepage</title>
+    <style>
+        #topBar{
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+        }
+        #logo{
+            display: inline-block;
+            font-family: "Skranji";
+            font-size: 40px;
+            padding-right: 60%;
+            color: white;
+        }
+        ul{
+            display: inline-block;
+            list-style: none;
+        }
+        li{
+            display: inline-block;
+        }
+        #active{
+        background-color: rgb(78, 77, 77);
+        }
+        li a{
+            text-decoration: none;
+            font-family: "Oswald";
+            color: white;
+            background-color: black;
+            padding: 10px;
+        } a:hover{
+            background-color: rgb(78, 77, 77);
+        }
+        body{
+            background-image: url(comps.jpg);
+            background-size: cover;
+            opacity: 0.8;
+            width:100%;
+            overflow:hidden;
+            position:static;
+            z-index: -1;
+            overflow-y: auto;
+            overflow-x: hidden;
+        } #container{
+            position: relative;
+            z-index: 1;
+            top:10%;
+            width: 100%;
+            height:100%;
+            display: block;
+            text-align: center;
+        }
+        img{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 1;
+        } 
+        #about{
+          position:absolute;
+          top:30%;
+          left:25%;
+          display: block;
+          border-style: hidden;
+          border-radius: 5px;
+          width:50%;
+          height:auto;
+          z-index: 2;
+          color:black;
+          background-color: rgb(171, 185, 196);
+          font-weight: 900;
+          font-family: "Sofia Sans";
+          font-size: 40px;
+          text-align: center;
+          opacity: 0.8;
+       }#paragraph{
+        font-family: "Roboto Condensed";
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.6;
+       } button{
+        background-color: black;
+        border-style: hidden;
+        border-radius: 5px ;
+        padding: 10px;
+        margin-bottom: 5px;
+       } button:hover{
+        background-color: rgb(78, 77, 77);
+       } a{
+        text-decoration: none;
+        font-family: "Roboto Condensed";
+        font-size: 15px;
+        font-weight: 200;
+        color:white;
+       } #quoteBlock{
+        position:absolute;
+        width:100%;
+        top:2%;
+        height: 15%;
+        background-color: black;
+        background-size: cover;
+        opacity:0.9;
+        z-index: 2;
+        opacity:1;
+       } #quote{
+        position:relative;
+        top:40%;
+        width: 100%;
+        font-family: "Caveat";
+        font-size: 30px;
+        color:white;
+        font-weight: 400;
+       }
+    </style>
+</head>
+<body>
+
+<div id="topBar">
+    <div id="logo">TECH PROFITS</div>
+    <ul>
+        <li ><a id="active">Home</a></li>
+        <li><a href= "services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</div>
+<div id="container">
+  <div id="quoteBlock"><p id="quote">"What technology does is create new opportunities to do a 
+    job that customers want done ~Tim Oreily"</p></div>
+  <img src="working.jpg"> 
+  <div id="about">Who Are We?
+    <p id="paragraph">We are a team of motivated tech experts looking to revamp the way your 
+        organization uses its technology. We want to help you ensure your business is taking full advantage
+        of any technological resources at its disposal in addition to letting you in on trade secrets when
+        it comes to acquiring your most needed hardware and software.
+    </p>
+    What We Do
+    <ul id="paragraph">
+        <li>Optimize existing business systems with the latest cutting-edge software.</li>
+        <li>Advise on premier technology practices to take your business to the next level. 
+        </li>
+        <li>Seamlessy integrate new software and hardware into your company.</li>
+    </ul>
+    <button><a href="services.html">Let us revolutionize your business</a></button>
+  </div>
+</div>
+
+</body>
+</html>

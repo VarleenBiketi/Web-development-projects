@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get("products.json", function(data) {
+                var products = data.products;
+                var productDisplay = document.getElementById("productDisplay");
+
+                products.forEach(function(product) {
+                    var productDiv = document.createElement("div");
+                    productDiv.className = "product";
+
+                    productDiv.innerHTML = `
+                        <h2>${product.name}</h2>
+                        <p>${product.description}</p>
+                        <p>Size: ${product.size}</p>
+                        <p>Price: $${product.price}</p>
+                        <p>Categories: ${product.categories.join(", ")}</p>
+                    `;
+
+                    productDisplay.appendChild(productDiv);
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="productDisplay"></div>
+
+    <script>
+        $(document).ready(function() {
+            $.get("products.json", function(data) {
+                var products = data.products;
+                var productDisplay = document.getElementById("productDisplay");
+
+                products.forEach(function(product) {
+                    var productDiv = document.createElement("div");
+                    productDiv.className = "product";
+
+                    productDiv.innerHTML = `
+                        <h2>${product.name}</h2>
+                        <p>${product.description}</p>
+                        <p>Size: ${product.size}</p>
+                        <p>Price: $${product.price}</p>
+                        <p>Categories: ${product.categories.join(", ")}</p>
+                    `;
+
+                    productDisplay.appendChild(productDiv);
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</body>
+</html>
