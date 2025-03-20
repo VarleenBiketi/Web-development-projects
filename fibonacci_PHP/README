@@ -1,0 +1,54 @@
+# Project README: PHP Tasks and API Implementation
+
+
+## Overview
+
+This project consists of three main tasks, each designed to practice PHP programming. The tasks involve creating a times table, using associative arrays, and developing a basic API that generates Fibonacci sequences. 
+
+** Cannot be hosted on github pages, needs hosting that suports PHP**
+
+## Project Tasks
+
+### Problem 1: Times Table
+
+- **Objective**: Create a PHP script that takes a number `n` from the query string and generates a times table for `n` from 1 to 12.
+
+- **How it works**:
+    - The script retrieves the value of `n` from the query string (e.g., `fibapi.php?n=3`).
+    - It loops through numbers 1 to 12 and generates the times table for `n`.
+    - The output is displayed in a simple HTML structure.
+
+### Problem 2: Associative Arrays
+
+- **Objective**: Create an associative array representing business office hours for each day of the week. Loop through the array to display the key-value pairs, and apply some basic CSS styling.
+  
+    - **CSS**: The output is styled with basic CSS to improve readability and presentation.
+
+### Problem 3: Create an API
+
+- **Objective**: Create a PHP file `fibapi.php` that serves as an API. The API receives a number `n` via GET data and responds with a JSON array representing the Fibonacci sequence up to `n` elements.
+
+- **Fibonacci Sequence**:
+  - The sequence starts with 0 and 1.
+  - Each subsequent number is the sum of the previous two numbers.
+
+- **How it works**:
+    - The user sends a GET request (e.g., `fibapi.php?n=5`).
+    - The script computes the Fibonacci sequence and returns the result in a JSON format.
+
+
+## File Structure
+
+- `problem1.php`: Main file for the Times Table task.
+- `problem2.php`: File for the Associative Arrays task.
+- `fibapi.php`: PHP API file for the Fibonacci sequence.
+
+
+
+## Notes
+- Ensure the GET method is properly used for passing parameters (`n`) in the query string.
+- All CSS styling and HTML elements are included for a better presentation of the results.
+- Cannot be hosted on github pages, needs hosting that suports PHP
+
+
+

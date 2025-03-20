@@ -1,0 +1,30 @@
+# README for **Joe’s Hotdog Stand Online Order Page**  
+
+**Online Page URL:** [https://varleenbiketi.github.io/Web-development-projects/Joe'sHotdogs/Joe's.html]  
+
+## Project Overview  
+This project is an interactive web page for **Joe’s Hotdog Stand** in Medford, allowing users to place orders online. The page prompts users to enter the quantity of hotdogs, fries, and drinks they want, then calculates the subtotal, applies discounts, adds tax, and displays a detailed order summary.  
+
+## File Structure  
+- **`Joe's.html`** – Homepage 
+- **`checkout.html`** – checkout page 
+
+## Deliverables  
+- **Code Files:** Uploaded (HTML, CSS, JavaScript)  
+
+
+## Features Implemented  
+✅ Constants for item prices  
+✅ `prompt()` to collect order details (`numDogs`, `numFries`, `numSoda`)  
+✅ Calculation of subtotal, discount (if applicable), tax, and final total  
+✅ Joe’s **10% discount** for orders **$25 or more** before tax  
+✅ Massachusetts meals tax **(6.25%)** applied after discount  
+✅ Function to format currency **without using `toFixed()`**  
+✅ Display of:  
+   - Quantity and cost per item  
+   - Subtotal before discount  
+   - Discount amount (if applicable)  
+   - Subtotal after discount  
+   - Tax amount  
+   - Final total  
+

@@ -1,0 +1,25 @@
+# README for **Tic Tac Toe Web App** 
+
+- **Online Page URL:** [https://varleenbiketi.github.io/Web-development-projects/TicTacToe/ticTacToe.html] 
+
+## Project Overview  
+This project is a simple **Tic Tac Toe** game implemented using **HTML, CSS, JavaScript, and jQuery**. Players take turns placing **X** or **O** on a **3×3 grid**, with the game detecting wins, ties, and allowing a restart.  
+
+## File Structure  
+- **`ticTacToe.html`** – Contains the game board and UI elements  
+ 
+
+
+## Features Implemented  
+✅ **Dynamically generated 3×3 grid** using JavaScript loops  
+✅ **Interactive board:** Clicking places an **X** or **O** depending on the turn  
+✅ **Turn tracking:** Displays whose turn it is  
+✅ **Win detection:** Checks for **3 in a row (horizontal, vertical, diagonal)**  
+✅ **Stalemate detection:** Announces a tie if all squares are filled with no winner  
+✅ **Reset button:** Clears the board and starts a new game  
+✅ **Prevents overwriting moves** once an X or O is placed  
+✅ **Code is modularized** with loops, functions, and arrays  
+
+## Hosting Notes  
+- JavaScript and jQuery must be enabled for the game to function correctly  
+

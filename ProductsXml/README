@@ -1,0 +1,23 @@
+# README for **XML Product Catalog**  
+
+- **Online XML URL:** [https://varleenbiketi.github.io/Web-development-projects/ProductsXml/products.xml] 
+
+## Project Overview  
+This project involves creating an **XML document** that represents a catalog of products. The document follows a structured format with **product names, descriptions, sizes, prices, and categories**. Additionally, a **CSS file** is used to style the XML for a visually appealing display.  
+
+## Deliverables  
+ 
+- **Code Files:**  
+  - `products.xml` – Contains the structured XML data  
+  - `mystyle.css` – Styles the XML for better readability  
+
+
+## Features Implemented  
+✅ **Well-formed and valid XML structure**  
+✅ **Includes at least 8 products**  
+✅ **Each product has a name, description, size, price, and categories**  
+✅ **Supports multiple categories per product**  
+✅ **At least 3 categories and 2 different sizes are included**  
+✅ **No HTML inside the XML file**  
+✅ **Styled with an external CSS file for readability**  
+

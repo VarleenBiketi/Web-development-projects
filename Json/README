@@ -1,0 +1,32 @@
+# README for **JSON and jQuery Product Listing**  
+
+- Online URL: [https://varleenbiketi.github.io/Web-development-projects/Json/json2.html] 
+
+## Project Overview  
+This project demonstrates **JSON data handling and jQuery interactions** by creating a product listing system. The project consists of **three parts**:  
+
+1. **Creating and displaying JSON data** (`json1.html`)  
+2. **Reading JSON from an external file and displaying it dynamically** (`json2.html`)  
+3. **Filtering products based on category selection** (`json3.html`)  
+
+## Deliverables  
+- **Code Files:**  
+  - `json1.html` – Defines a JSON object, converts it to a string, and displays it  
+  - `products.json` – Contains structured product data  
+  - `json2.html` – Reads `products.json` and displays product details dynamically  
+  - `json3.html` – Reads `products.json`, allows category filtering, and displays matching products  
+
+
+## Features Implemented  
+✅ **JSON structure with at least 12 products**  
+✅ **Products categorized under at least 3 different categories**  
+✅ **Supports multiple categories per product**  
+✅ **Uses jQuery to load and manipulate JSON data**  
+✅ **Dynamically generates category selection from JSON data**  
+✅ **Implements filtering functionality using jQuery**  
+✅ **Styled display using CSS for better readability**  
+
+## Hosting Notes  
+ 
+- The **products.json** file must be hosted in the same directory for `json2.html` and `json3.html` to work correctly  
+

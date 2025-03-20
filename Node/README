@@ -1,0 +1,55 @@
+# README: Company Stock Ticker Web App
+
+URL : [https://varleenbiketi.github.io/Web-development-projects/Node/stock.html]
+
+## Overview
+
+The **Company Stock Ticker Web App** is a two-part project that allows users to search for company names or stock ticker symbols and retrieve matching results. The first part involves populating a MongoDB database with stock data, while the second part involves creating a web interface where users can input either a company name or a stock ticker symbol to retrieve matching data.
+
+---
+
+## Part 1: MongoDB Database Setup and Data Insertion
+
+### Implementation Details
+
+1. **MongoDB Database**:
+   - A MongoDB database named `companyDB` is created with a collection called `Companies`. This collection stores documents containing the company name, stock ticker symbol, and the latest stock price.
+
+2. **CSV File Processing**:
+   - The data from a CSV file (`companies.csv`) is read and inserted into the MongoDB database. The app reads each line from the CSV file, extracts the company name, stock ticker, and stock price, and inserts this data as a new document into the `Companies` collection.
+   - The reading of the CSV file is done line-by-line, and each line is parsed and stored in the database. No third-party modules like `csvtojson` or built-in MongoDB import tools are used to process the file.
+
+3. **Console Output**:
+   - As each line of the CSV is processed, the company name, stock ticker, and stock price are displayed in the console for verification.
+
+4. **No Server Interaction**:
+   - This part of the app runs directly in the console and does not involve any web server functionality. The script reads the file, processes the data, and inserts it into the database, with no need for any web server handling or user interaction.
+
+
+
+## Part 2: Stock Ticker Lookup Web App
+
+### Implementation Details
+
+1. **HTML Form**:
+   - The app features an HTML form that allows users to input either a stock ticker symbol or a company name. The form includes two radio buttons to specify which type of input is provided (company name or ticker symbol).
+   - The form is designed to be simple and allows users to enter their search query and submit the form to the backend for processing.
+
+2. **Node.js Backend**:
+   - The form submits data to a Node.js script, which processes the request.
+   - The Node.js script retrieves the form data, determines whether the user is searching by company name or stock ticker symbol based on the selected radio button, and queries the MongoDB database accordingly.
+   - The script uses the search query to construct a MongoDB query that looks for matching documents in the `Companies` collection.
+
+3. **Database Query**:
+   - The Node.js script uses a regular expression to match the search query against the company name or ticker symbol in the database, depending on the user's input.
+   - The script handles multiple matching results, as a single ticker symbol may correspond to multiple companies.
+
+4. **Displaying Results**:
+   - After querying the database, the script formats the results (company name, ticker symbol, and stock price) and displays them on a new page. The results are returned to the user in a simple, readable format.
+
+5. **Web App Functionality**:
+   - The web app runs locally and handles both the form submission and the retrieval of matching data from the MongoDB database.
+   - Users can input either a company name or a ticker symbol, and the app will display all matching results with their stock price.
+
+
+

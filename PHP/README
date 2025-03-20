@@ -1,0 +1,66 @@
+# README: Two Owls Café Online Ordering System
+
+## Overview
+
+The **Two Owls Café** Online Ordering System is a web application developed to allow customers to place orders from a menu of food items. This system uses **PHP** for form processing, **JavaScript** for client-side validation, and **MySQL** to store the menu items and customer order data. The system provides an intuitive ordering interface where customers can select menu items, specify quantities, and submit their orders for processing.
+
+
+** Cannot be hosted on github pages, needs hosting that suports PHP databases**
+
+
+## Key Features
+
+1. **Menu Display**: Dynamic display of menu items, with names, descriptions, prices, and images fetched from a MySQL database.
+2. **Order Form**: Allows customers to select the quantity of each item they wish to order, along with providing their name and any special instructions.
+3. **JavaScript Validation**: Ensures that at least one item is ordered and that the customer’s name is entered before the form can be submitted.
+4. **Pickup Time Calculation**: Automatically calculates the pickup time as 20 minutes from the current time and submits it with the order.
+5. **Order Summary**: After submitting the order, customers receive a detailed order summary, including itemized costs, tax, and total, as well as their pickup time and special instructions.
+
+---
+
+## Implementation Details
+
+### Task 1: Menu Data
+
+- **Menu Items**: A set of food items (at least 6) was defined for the café menu, each with a name, description, price, and image.
+- **MySQL Database**: A **MySQL** database named `twoolscafe` was created to store the menu items. The `menu` table includes fields for the item name, description, price, and image filename (images are stored in the server’s `images/` directory).
+  
+### Task 2: Order Form (order.php)
+
+- **Form Structure**: The order form is created using the `<form>` HTML tag with the `GET` method and the action attribute set to `process_order.php` to process the form submission.
+  - Each item in the menu is displayed with its name, description, price, and an image.
+  - A `<select>` element is provided for each item, allowing customers to choose the quantity (ranging from 0 to 10).
+  - The form includes fields for the customer’s first and last name, special instructions (in a `<textarea>`), and a hidden field for the pickup time.
+  
+- **Menu Fetching**: The PHP script dynamically fetches the menu items from the **MySQL** database and populates the form with this data, ensuring that the displayed information is always up to date.
+
+### Task 3: Header (header.php)
+
+- **Reusable Header**: A reusable header was created in a separate PHP file (`header.php`), which includes the café’s name or logo and its operating hours (11am - 10pm). This header is included in the main order form page using the PHP `include` function, ensuring consistency across pages.
+
+### Task 4: JavaScript Validation
+
+- **Client-Side Validation**: JavaScript was used to validate the order form before submission:
+  1. **Item Validation**: The form checks that at least one item has been selected with a quantity greater than 0.
+  2. **Name Validation**: The form ensures that both the first and last name fields are filled out.
+  
+- **Pickup Time Calculation**: JavaScript automatically calculates the pickup time by adding 20 minutes to the current time, even if the order is placed outside store hours. This pickup time is then stored in the hidden field and submitted with the form.
+
+### Task 5: Process Order (process_order.php)
+
+- **Order Summary**: The `process_order.php` page processes the form data and displays a summary of the customer’s order:
+  1. **Itemized List**: For each ordered item, the name, quantity, price, and total (price * quantity) are displayed.
+  2. **Subtotal, Tax, and Total**: The subtotal for the order is calculated, along with the tax (6.25%). The total amount due is then displayed.
+  3. **User Information**: The customer’s name and any special instructions are displayed.
+  4. **Pickup Time**: The calculated pickup time from the form submission is displayed on the order summary.
+
+
+
+---
+
+## File Structure
+
+- **`menu.php`**: Displays the menu and handles the customer’s order form submission.
+- **`order_process.php`**: Processes the submitted order and displays a summary with itemized costs, tax, and total.
+
+
