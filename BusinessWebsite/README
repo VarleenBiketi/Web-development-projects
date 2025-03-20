@@ -1,0 +1,45 @@
+# README for Small Business Website  
+
+## Website Information  
+- **URL:** [https://varleenbiketi.github.io/Web-development-projects/BusinessWebsite/homepage.html]  
+
+## Project Overview  
+This project is a simple, responsive website designed for a service business or non-profit organization. The website consists of at least three pages: a home page, a contact page, and an additional content page. It adheres to usability principles, ensuring accessibility and ease of navigation.  
+
+## File Structure  
+- **HTML/CSS Files:**  
+  - `/homepage.html` – Home page  
+  - `/contact.html` – Contact page  
+  - `/services.html`- services  
+  - `/css/styles.css` – External stylesheet  
+  - `/*jpg` – images  
+
+
+## Features and Requirements Met  
+- **Website Structure:**  
+  - At least three pages (home, contact, and another relevant page)  
+  - Realistic content (no Lorem Ipsum)  
+- **Styling:**  
+  - At least 10 CSS style rules applied  
+  - External stylesheet for consistent design  
+  - Internal stylesheet used on one page  
+- **Interactivity & Accessibility:**  
+  - Form included with `action="#"`  
+  - Hover effect applied to links  
+  - Table or list incorporated for structured content  
+- **Media & Layout:**  
+  - At least two images (one as a background image)  
+  - Image sizes within the specified limits  
+  - Fixed page elements for consistency (e.g., header, footer, navigation)  
+- **Responsiveness:**  
+  - Mobile-friendly design, verified through [Google’s Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)  
+
+## Hosting  
+- The website is hosted using **[GitHub Pages]** .  
+
+## Notes  
+- Any borrowed content is cited in the design document.  
+- Images do not contain watermarks.  
+- The design focuses on usability and aesthetics while maintaining functional requirements.  
+
+For additional details, refer to the provided documentation files.
