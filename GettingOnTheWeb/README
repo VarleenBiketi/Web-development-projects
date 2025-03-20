@@ -1,0 +1,26 @@
+# README for Personal Web Page  
+
+- **GitHub Pages URL:**  [https://varleenbiketi.github.io/Web-development-projects/GettingOnTheWeb/assignement1.html]
+
+## Project Overview  
+This project is a simple HTML webpage that displays personal information and an image. The page is hosted both on **GitHub Pages** .  
+
+## File Structure  
+- **`assignement1.html`** – Main webpage file  
+- **`images/`** – Folder containing the image of my favorite place  
+- **`screenshots/`** – Screenshot of the webpage running locally  
+
+ 
+
+
+## Page Content  
+The webpage includes:  
+✅ My first name  
+✅ My major  
+✅ My current IP address  
+✅ The place I grew up  
+✅ Something unexpected about me  
+✅ A picture of my favorite place  
+
+## Hosting Notes  
+- The **GitHub Pages version** is published and accessible online.  
