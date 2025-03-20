@@ -1,0 +1,56 @@
+
+# **README - Top Movies API Project**  
+
+<<<<<<<< HEAD:APIUsage/README
+Online URL: [https://varleenbiketi.github.io/Web-development-projects/APIUsage/apiData.html]
+========
+Online URL: [https://varleenbiketi.github.io/Web-development-projects/APIs/apiData.html]
+>>>>>>>> parent of d1afd0a (Changed file titles):APIs/README
+
+## **Project Overview**  
+This project utilizes the **OMDb API** to fetch and display movie data dynamically using JavaScript and the `fetch` API. The webpage lists the top movies based on a search query and provides details such as title, year, type, and IMDb ID.  
+
+## **Deliverables**  
+✅ **Code Files:**  
+- `apiData.html` – The main file containing the API request and display logic  
+
+
+## **Features Implemented**  
+✅ Fetches data from **OMDb API** using JavaScript's `fetch()` method  
+✅ Dynamically displays movie information in an organized manner  
+✅ Includes API details, request parameters, and use-case explanations  
+✅ Provides applications for using the OMDb API  
+
+---
+
+## **API Information**  
+- **API Used:** [OMDb API](http://www.omdbapi.com/)  
+- **API Request URL:**  
+  ```
+  https://www.omdbapi.com/?s=movie&type=movie&r=json&apikey=YOUR_API_KEY
+  ```
+- **Query Parameters Explained:**  
+  - `s=movie` → Searches for movies with the keyword "movie"  
+  - `type=movie` → Filters results to only movies (not TV series)  
+  - `r=json` → Specifies that the response format is JSON  
+  - `apikey=YOUR_API_KEY` → API key for authentication  
+
+---
+
+## **How to Use**  
+1. Open the **apiData.html** file in a web browser.  
+2. The script will fetch movie data from the **OMDb API**.  
+3. The page will display a list of movies, including their title, year, type, and IMDb ID.  
+4. API details and use-case explanations are provided at the bottom of the page.  
+
+---
+
+## **Potential Applications**  
+📌 **Movie Recommendation System:** This API can be used to fetch movie details for a recommendation platform.  
+📌 **Movie Review Websites:** A website can utilize this API to provide details on movies users want to review.  
+
+---
+
+## **Hosting Notes**  
+- The API key used is **required** for the application to function correctly. Ensure you have a valid API key from [OMDb API](http://www.omdbapi.com/).  
+
