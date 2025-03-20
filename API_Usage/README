@@ -1,7 +1,7 @@
 
 # **README - Top Movies API Project**  
 
-Online URL: [https://varleenbiketi.github.io/Web-development-projects/APIs/apiData.html]
+Online URL: [https://varleenbiketi.github.io/Web-development-projects/API_Usage/apiData.html]
 
 ## **Project Overview**  
 This project utilizes the **OMDb API** to fetch and display movie data dynamically using JavaScript and the `fetch` API. The webpage lists the top movies based on a search query and provides details such as title, year, type, and IMDb ID.  
