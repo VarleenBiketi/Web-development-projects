@@ -1,7 +1,7 @@
 # README for **Tic Tac Toe Web App** 
+** no diagonal wins for this game **
 
 - **Online Page URL:** [https://varleenbiketi.github.io/Web-development-projects/TicTacToe/ticTacToe.html] 
-** no diagonal wins for this game **
 
 ## Project Overview  
 This project is a simple **Tic Tac Toe** game implemented using **HTML, CSS, JavaScript, and jQuery**. Players take turns placing **X** or **O** on a **3×3 grid**, with the game detecting wins, ties, and allowing a restart.  
